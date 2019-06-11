@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name TMS9918A)(type Legacy)(uri "/Users/kuninet/Box Sync/github/KZ80-TMS9918A/KiCAD/TMS9918A.lib")(options "")(descr ""))
+  (lib (name HM62256)(type Legacy)(uri "/Users/kuninet/Box Sync/github/KZ80-TMS9918A/KiCAD/HM62256.lib")(options "")(descr ""))
+)
