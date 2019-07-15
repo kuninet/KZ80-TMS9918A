@@ -10,6 +10,6 @@ image::image/KZ80-TMS9918A.jpg[]
 * 本プロジェクトのデータはMITライセンスのもとで公開します。
 
 === 参考
-* 以下のサイトの情報ー参考に作成しています。ありがとうございます。
+* 以下のサイトの情報を参考に作成しています。ありがとうございます。
 ** https://github.com/jblang/TMS9918A
 ** https://retrobrewcomputers.org/n8vem-pbwiki-archive/0/35845334/48860720/33053543/SRAM%20Replacement%20for%20TMS99x8%20VRAM.pdf
