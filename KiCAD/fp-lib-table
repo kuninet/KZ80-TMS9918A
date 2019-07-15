@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name RCACon)(type KiCad)(uri ${KIPRJMOD}/RCA.pretty)(options "")(descr ""))
+)

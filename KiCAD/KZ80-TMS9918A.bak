@@ -762,21 +762,21 @@ Wire Wire Line
 Text Label 3000 2400 0    50   ~ 0
 R~W
 Text Label 1400 1300 0    50   ~ 0
-D0
-Text Label 1400 1400 0    50   ~ 0
-D1
-Text Label 1400 1500 0    50   ~ 0
-D2
-Text Label 1400 1600 0    50   ~ 0
-D3
-Text Label 1400 1700 0    50   ~ 0
-D4
-Text Label 1400 1800 0    50   ~ 0
-D5
-Text Label 1400 1900 0    50   ~ 0
-D6
-Text Label 1400 2000 0    50   ~ 0
 D7
+Text Label 1400 1400 0    50   ~ 0
+D6
+Text Label 1400 1500 0    50   ~ 0
+D5
+Text Label 1400 1600 0    50   ~ 0
+D4
+Text Label 1400 1700 0    50   ~ 0
+D3
+Text Label 1400 1800 0    50   ~ 0
+D2
+Text Label 1400 1900 0    50   ~ 0
+D1
+Text Label 1400 2000 0    50   ~ 0
+D0
 $Comp
 L 74xx:74HCT04 U1
 U 1 1 5D0E5AF4
@@ -1151,17 +1151,6 @@ Entry Wire Line
 Text Label 8650 1350 2    50   ~ 0
 CLK
 $Comp
-L Transistor_BJT:2SC1815 Q1
-U 1 1 5D47CA6E
-P 2500 5100
-F 0 "Q1" H 2350 5250 50  0000 L CNN
-F 1 "2SC1815" H 2100 4950 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 2700 5025 50  0001 L CIN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 2500 5100 50  0001 L CNN
-	1    2500 5100
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Device:R_US R2
 U 1 1 5D48A6FF
 P 3100 4000
@@ -1181,56 +1170,45 @@ Wire Wire Line
 $Comp
 L power:VCC #PWR06
 U 1 1 5D4A6A34
-P 1850 4300
-F 0 "#PWR06" H 1850 4150 50  0001 C CNN
-F 1 "VCC" H 1867 4473 50  0000 C CNN
-F 2 "" H 1850 4300 50  0001 C CNN
-F 3 "" H 1850 4300 50  0001 C CNN
-	1    1850 4300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C3
-U 1 1 5D4A6A5F
-P 1850 5050
-F 0 "C3" H 1965 5096 50  0000 L CNN
-F 1 "0.1U" H 1650 4950 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 1888 4900 50  0001 C CNN
-F 3 "~" H 1850 5050 50  0001 C CNN
-	1    1850 5050
+P 750 4300
+F 0 "#PWR06" H 750 4150 50  0001 C CNN
+F 1 "VCC" H 767 4473 50  0000 C CNN
+F 2 "" H 750 4300 50  0001 C CNN
+F 3 "" H 750 4300 50  0001 C CNN
+	1    750  4300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L_Core_Ferrite L1
 U 1 1 5D4A7380
-P 1850 4550
-F 0 "L1" H 1938 4596 50  0000 L CNN
-F 1 "L_Core_Ferrite" H 1938 4505 50  0000 L CNN
-F 2 "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P10.16mm_Horizontal_Vishay_IM-1" H 1850 4550 50  0001 C CNN
-F 3 "~" H 1850 4550 50  0001 C CNN
-	1    1850 4550
+P 750 4550
+F 0 "L1" H 838 4596 50  0000 L CNN
+F 1 "L_Core_Ferrite" H 838 4505 50  0000 L CNN
+F 2 "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P10.16mm_Horizontal_Vishay_IM-1" H 750 4550 50  0001 C CNN
+F 3 "~" H 750 4550 50  0001 C CNN
+	1    750  4550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1850 4300 1850 4400
+	750  4300 750  4400
 Wire Wire Line
-	1850 4700 1850 4800
+	750  4700 750  4800
 Wire Wire Line
-	1850 4800 2400 4800
+	750  4800 950  4800
 Wire Wire Line
 	2400 4800 2400 4900
-Connection ~ 1850 4800
+Connection ~ 750  4800
 Wire Wire Line
-	1850 4800 1850 4900
+	750  4800 750  5100
 $Comp
 L Connector:Conn_Coaxial J1
 U 1 1 5D4FC86A
-P 2150 5400
-F 0 "J1" H 2150 5500 50  0000 C CNN
-F 1 "Conn_Coaxial" V 2300 5300 50  0000 C CNN
-F 2 "Connector_Coaxial:SMA_Molex_73251-1153_EdgeMount_Horizontal" H 2150 5400 50  0001 C CNN
-F 3 " ~" H 2150 5400 50  0001 C CNN
-	1    2150 5400
+P 1300 5400
+F 0 "J1" H 1300 5500 50  0000 C CNN
+F 1 "Conn_Coaxial" H 1300 5650 50  0000 C CNN
+F 2 "RCACon:RCAConAE" H 1300 5400 50  0001 C CNN
+F 3 " ~" H 1300 5400 50  0001 C CNN
+	1    1300 5400
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -1249,27 +1227,18 @@ L Device:R_US R1
 U 1 1 5D528308
 P 2400 5650
 F 0 "R1" H 2468 5696 50  0000 L CNN
-F 1 "75" H 2468 5605 50  0000 L CNN
+F 1 "300" H 2468 5605 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2440 5640 50  0001 C CNN
 F 3 "~" H 2400 5650 50  0001 C CNN
 	1    2400 5650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1850 5200 1850 5850
-Wire Wire Line
-	1850 5850 2150 5850
+	750  5400 750  5850
 Wire Wire Line
 	3100 5850 3100 5750
 Wire Wire Line
 	3100 5450 3100 5100
-Wire Wire Line
-	2400 5300 2400 5400
-Wire Wire Line
-	2400 5400 2350 5400
-Wire Wire Line
-	2400 5400 2400 5500
-Connection ~ 2400 5400
 Wire Wire Line
 	2400 5800 2400 5850
 Connection ~ 2400 5850
@@ -1290,13 +1259,13 @@ Wire Wire Line
 	2400 5850 2400 5950
 $Comp
 L 74xx:74LS139 U2
-U 1 1 5D59259E
+U 2 1 5D59259E
 P 9900 900
 F 0 "U2" H 9900 1267 50  0000 C CNN
 F 1 "74HC139" H 9900 1176 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 9900 900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS139" H 9900 900 50  0001 C CNN
-	1    9900 900 
+	2    9900 900 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1314,10 +1283,8 @@ Wire Wire Line
 	3100 4150 3100 5100
 Connection ~ 3100 5100
 Wire Wire Line
-	2150 5600 2150 5850
-Connection ~ 2150 5850
-Wire Wire Line
-	2150 5850 2400 5850
+	1300 5600 1300 5850
+Connection ~ 1300 5850
 $Comp
 L 74xx:74HCT04 U1
 U 7 1 5D61E0A4
@@ -2254,6 +2221,96 @@ Wire Wire Line
 Connection ~ 3500 7500
 Wire Wire Line
 	3450 5450 3650 5450
+Wire Wire Line
+	2400 5300 2400 5400
+$Comp
+L Device:CP C15
+U 1 1 5D6598DA
+P 2150 5400
+F 0 "C15" V 1895 5400 50  0000 C CNN
+F 1 "470u" V 1986 5400 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 2188 5250 50  0001 C CNN
+F 3 "~" H 2150 5400 50  0001 C CNN
+	1    2150 5400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2300 5400 2400 5400
+Connection ~ 2400 5400
+Wire Wire Line
+	2400 5400 2400 5500
+$Comp
+L Device:R_US R5
+U 1 1 5D6A37A5
+P 1950 5600
+F 0 "R5" H 2018 5646 50  0000 L CNN
+F 1 "10k" H 2018 5555 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1990 5590 50  0001 C CNN
+F 3 "~" H 1950 5600 50  0001 C CNN
+	1    1950 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R4
+U 1 1 5D714369
+P 1750 5400
+F 0 "R4" V 1900 5400 50  0000 L CNN
+F 1 "75" V 1818 5355 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1790 5390 50  0001 C CNN
+F 3 "~" H 1750 5400 50  0001 C CNN
+	1    1750 5400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2000 5400 1950 5400
+$Comp
+L Device:C C14
+U 1 1 5D7ADB17
+P 950 5500
+F 0 "C14" H 1050 5600 50  0000 L CNN
+F 1 "0.1u" H 750 5400 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 988 5350 50  0001 C CNN
+F 3 "~" H 950 5500 50  0001 C CNN
+	1    950  5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  4800 950  5350
+Connection ~ 950  4800
+Wire Wire Line
+	950  4800 2400 4800
+Wire Wire Line
+	950  5650 950  5850
+Wire Wire Line
+	750  5850 950  5850
+Connection ~ 950  5850
+Wire Wire Line
+	950  5850 1300 5850
+Wire Wire Line
+	1500 5400 1600 5400
+Wire Wire Line
+	1300 5850 1950 5850
+Wire Wire Line
+	1950 5400 1950 5450
+Connection ~ 1950 5400
+Wire Wire Line
+	1950 5400 1900 5400
+Wire Wire Line
+	1950 5750 1950 5850
+Connection ~ 1950 5850
+Wire Wire Line
+	1950 5850 2400 5850
+$Comp
+L Transistor_BJT:2SC1815 Q1
+U 1 1 5D36B1EA
+P 2500 5100
+F 0 "Q1" H 2691 5146 50  0000 L CNN
+F 1 "2SC1815" H 2150 4950 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 2700 5025 50  0001 L CIN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 2500 5100 50  0001 L CNN
+	1    2500 5100
+	-1   0    0    -1  
+$EndComp
 Wire Bus Line
 	8850 600  8850 1650
 Wire Bus Line
@@ -2261,23 +2318,34 @@ Wire Bus Line
 Wire Bus Line
 	9350 3750 9350 5150
 Wire Bus Line
-	7650 3850 7650 5150
-Wire Bus Line
-	5400 3850 5400 5150
-Wire Bus Line
-	5000 700  5000 5150
-Wire Bus Line
-	3300 3850 3300 5150
-Wire Bus Line
-	3300 1400 3300 3850
-Wire Bus Line
-	7350 700  7350 1900
-Wire Bus Line
-	3500 700  3500 3250
+	7650 600  7650 2150
 Wire Bus Line
 	1200 850  1200 2300
 Wire Bus Line
-	7650 600  7650 2150
+	3500 700  3500 3250
+Wire Bus Line
+	7350 700  7350 1900
+Wire Bus Line
+	3300 1400 3300 3850
+Wire Bus Line
+	3300 3850 3300 5150
+Wire Bus Line
+	5000 700  5000 5150
+Wire Bus Line
+	5400 3850 5400 5150
+Wire Bus Line
+	7650 3850 7650 5150
 Wire Bus Line
 	5450 1400 5450 3750
+$Comp
+L Device:CP C3
+U 1 1 5D393963
+P 750 5250
+F 0 "C3" H 800 5350 50  0000 L CNN
+F 1 "10u" H 600 5150 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 788 5100 50  0001 C CNN
+F 3 "~" H 750 5250 50  0001 C CNN
+	1    750  5250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
