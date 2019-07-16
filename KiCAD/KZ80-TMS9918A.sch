@@ -1012,16 +1012,12 @@ Wire Wire Line
 	8000 1950 7750 1950
 Wire Wire Line
 	8000 2050 7750 2050
-Wire Wire Line
-	8000 2150 7750 2150
 Entry Wire Line
 	7750 1850 7650 1750
 Entry Wire Line
 	7750 1950 7650 1850
 Entry Wire Line
 	7750 2050 7650 1950
-Entry Wire Line
-	7750 2150 7650 2050
 Text Label 7850 1450 0    50   ~ 0
 D0
 Text Label 7850 1550 0    50   ~ 0
@@ -1036,8 +1032,6 @@ Text Label 7850 1950 0    50   ~ 0
 ~IOW
 Text Label 7850 2050 0    50   ~ 0
 RES
-Text Label 7850 2150 0    50   ~ 0
-INT
 Wire Wire Line
 	8500 1450 8750 1450
 Wire Wire Line
@@ -2322,6 +2316,7 @@ F 3 "~" H 750 5250 50  0001 C CNN
 	1    750  5250
 	1    0    0    -1  
 $EndComp
+NoConn ~ 8000 2150
 Wire Bus Line
 	8850 600  8850 1650
 Wire Bus Line
