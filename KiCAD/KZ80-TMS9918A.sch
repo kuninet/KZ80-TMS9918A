@@ -1221,7 +1221,7 @@ L Device:R_US R1
 U 1 1 5D528308
 P 2400 5650
 F 0 "R1" H 2468 5696 50  0000 L CNN
-F 1 "300" H 2468 5605 50  0000 L CNN
+F 1 "180" H 2468 5605 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2440 5640 50  0001 C CNN
 F 3 "~" H 2400 5650 50  0001 C CNN
 	1    2400 5650
@@ -2238,25 +2238,12 @@ L Device:R_US R5
 U 1 1 5D6A37A5
 P 1950 5600
 F 0 "R5" H 2018 5646 50  0000 L CNN
-F 1 "10k" H 2018 5555 50  0000 L CNN
+F 1 "2k" H 2018 5555 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1990 5590 50  0001 C CNN
 F 3 "~" H 1950 5600 50  0001 C CNN
 	1    1950 5600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R_US R4
-U 1 1 5D714369
-P 1750 5400
-F 0 "R4" V 1900 5400 50  0000 L CNN
-F 1 "75" V 1818 5355 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1790 5390 50  0001 C CNN
-F 3 "~" H 1750 5400 50  0001 C CNN
-	1    1750 5400
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2000 5400 1950 5400
 $Comp
 L Device:C C14
 U 1 1 5D7ADB17
@@ -2272,7 +2259,7 @@ Wire Wire Line
 	950  4800 950  5350
 Connection ~ 950  4800
 Wire Wire Line
-	950  4800 2400 4800
+	950  4800 1800 4800
 Wire Wire Line
 	950  5650 950  5850
 Wire Wire Line
@@ -2281,14 +2268,7 @@ Connection ~ 950  5850
 Wire Wire Line
 	950  5850 1300 5850
 Wire Wire Line
-	1500 5400 1600 5400
-Wire Wire Line
 	1300 5850 1950 5850
-Wire Wire Line
-	1950 5400 1950 5450
-Connection ~ 1950 5400
-Wire Wire Line
-	1950 5400 1900 5400
 Wire Wire Line
 	1950 5750 1950 5850
 Connection ~ 1950 5850
@@ -2317,6 +2297,34 @@ F 3 "~" H 750 5250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 8000 2150
+$Comp
+L Device:R_US R4
+U 1 1 5D316E34
+P 1800 5050
+F 0 "R4" H 1868 5096 50  0000 L CNN
+F 1 "1k" H 1650 5050 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1840 5040 50  0001 C CNN
+F 3 "~" H 1800 5050 50  0001 C CNN
+	1    1800 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 4900 1800 4800
+Connection ~ 1800 4800
+Wire Wire Line
+	1800 4800 2400 4800
+Wire Wire Line
+	1800 5200 1800 5400
+Wire Wire Line
+	1500 5400 1800 5400
+Wire Wire Line
+	1800 5400 1950 5400
+Connection ~ 1800 5400
+Wire Wire Line
+	1950 5400 1950 5450
+Connection ~ 1950 5400
+Wire Wire Line
+	1950 5400 2000 5400
 Wire Bus Line
 	8850 600  8850 1650
 Wire Bus Line

@@ -1,9 +1,9 @@
-(pcb "/Users/kuninet/Box Sync/github/KZ80-TMS9918A/KiCAD/KZ80-TMS9918A.dsn"
+(pcb "C:\Users\kunin\Box Sync\github\KZ80-TMS9918A\KiCAD\KZ80-TMS9918A.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
     (host_cad "KiCad's Pcbnew")
-    (host_version "(5.0.0-3-g5ebb6b6)")
+    (host_version "(5.0.2)-1")
   )
   (resolution um 10)
   (unit um)
@@ -53,12 +53,12 @@
       (place J1 128000 -117500 front 180 (PN Conn_Coaxial))
     )
     (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal
-      (place R4 141000 -122500 front 90 (PN 75))
+      (place R4 141000 -122500 front 90 (PN 1k))
       (place R2 129000 -79500 front 270 (PN 0))
     )
     (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal::1
-      (place R5 136500 -112500 front 270 (PN 10k))
-      (place R1 123500 -104000 front 0 (PN 300))
+      (place R5 136500 -112500 front 270 (PN 2k))
+      (place R1 123500 -104000 front 0 (PN 180))
       (place R3 125000 -89500 front 90 (PN 470))
     )
     (component Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm::1
@@ -108,11 +108,11 @@
       (place U2 176500 -90500 front 0 (PN 74HC139))
     )
     (component "Package_DIP:DIP-20_W7.62mm_Socket"
-      (place U6 146000 -99000 front 0 (PN 74HC574))
-      (place U9 133500 -70500 front 0 (PN 74HC574))
+      (place U6 146000 -99000 front 0 (PN 74HCT574))
+      (place U9 133500 -70500 front 0 (PN 74HCT574))
     )
     (component "Package_DIP:DIP-20_W7.62mm_Socket::1"
-      (place U7 145500 -70500 front 0 (PN 74HC574))
+      (place U7 145500 -70500 front 0 (PN 74HCT574))
     )
     (component "Package_DIP:DIP-28_W15.24mm"
       (place U8 156775 -67925 front 0 (PN HM62256))
@@ -1527,9 +1527,6 @@
     (net "Net-(R2-Pad1)"
       (pins U4-36 R2-1)
     )
-    (net "Net-(J1-Pad1)"
-      (pins J1-1 R4-1)
-    )
     (net /~RAS
       (pins U1-3 U4-1)
     )
@@ -1781,7 +1778,7 @@
       (pins U1-9 U1-6)
     )
     (net /INT
-      (pins J3-5 J2-23 U1-12)
+      (pins J3-5 U1-12)
     )
     (net "Net-(J2-Pad5)"
       (pins J2-5)
@@ -1838,13 +1835,13 @@
       (pins J2-40)
     )
     (net "Net-(C15-Pad2)"
-      (pins C15-2 R4-2 R5-1)
+      (pins C15-2 J1-1 R4-2 R5-1)
     )
     (net "Net-(C15-Pad1)"
       (pins C15-1 Q1-1 R1-1)
     )
     (net "Net-(C14-Pad1)"
-      (pins C3-1 C14-1 L1-2 Q1-2)
+      (pins C3-1 C14-1 R4-1 L1-2 Q1-2)
     )
     (net "Net-(J5-Pad7)"
       (pins J5-7 U2-7)
@@ -1852,22 +1849,24 @@
     (net "Net-(J4-Pad7)"
       (pins J4-7 U2-9)
     )
+    (net "Net-(J2-Pad23)"
+      (pins J2-23)
+    )
     (class kicad_default "" /A0 /A3 /A4 /A5 /A6 /A7 /AD0 /AD1 /AD2 /AD3 /AD4
       /AD5 /AD6 /AD7 /CLK /COL /CPUCLK /D0 /D1 /D2 /D3 /D4 /D5 /D6 /D7 /EXTVDP
       /GROMCLK /INT /RES /ROW /R~W /VA0 /VA1 /VA10 /VA11 /VA12 /VA13 /VA2
       /VA3 /VA4 /VA5 /VA6 /VA7 /VA8 /VA9 /VD0 /VD1 /VD2 /VD3 /VD4 /VD5 /VD6
       /VD7 /~CAS /~CSR /~CSW /~INT /~IOR /~IOW /~RAS /~RES /~R~W "Net-(C1-Pad1)"
-      "Net-(C14-Pad1)" "Net-(C15-Pad1)" "Net-(C15-Pad2)" "Net-(C2-Pad1)" "Net-(C3-Pad1)"
-      "Net-(J1-Pad1)" "Net-(J2-Pad18)" "Net-(J2-Pad20)" "Net-(J2-Pad22)" "Net-(J2-Pad24)"
-      "Net-(J2-Pad26)" "Net-(J2-Pad27)" "Net-(J2-Pad33)" "Net-(J2-Pad34)"
-      "Net-(J2-Pad35)" "Net-(J2-Pad36)" "Net-(J2-Pad37)" "Net-(J2-Pad38)"
-      "Net-(J2-Pad39)" "Net-(J2-Pad40)" "Net-(J2-Pad5)" "Net-(J2-Pad6)" "Net-(J2-Pad7)"
-      "Net-(J4-Pad1)" "Net-(J4-Pad2)" "Net-(J4-Pad3)" "Net-(J4-Pad4)" "Net-(J4-Pad5)"
-      "Net-(J4-Pad7)" "Net-(J5-Pad1)" "Net-(J5-Pad2)" "Net-(J5-Pad3)" "Net-(J5-Pad4)"
-      "Net-(J5-Pad5)" "Net-(J5-Pad7)" "Net-(JP1-Pad2)" "Net-(JP1-Pad3)" "Net-(Q1-Pad3)"
-      "Net-(R2-Pad1)" "Net-(U1-Pad11)" "Net-(U1-Pad6)" "Net-(U3-Pad11)" "Net-(U3-Pad8)"
-      "Net-(U5-Pad10)" "Net-(U5-Pad12)" "Net-(U5-Pad6)" "Net-(U5-Pad8)" "Net-(U7-Pad19)"
-      "Net-(U9-Pad19)"
+      "Net-(C14-Pad1)" "Net-(C15-Pad1)" "Net-(C15-Pad2)" "Net-(C2-Pad1)" "Net-(J1-Pad1)"
+      "Net-(J2-Pad18)" "Net-(J2-Pad20)" "Net-(J2-Pad22)" "Net-(J2-Pad23)"
+      "Net-(J2-Pad24)" "Net-(J2-Pad26)" "Net-(J2-Pad27)" "Net-(J2-Pad33)"
+      "Net-(J2-Pad34)" "Net-(J2-Pad35)" "Net-(J2-Pad36)" "Net-(J2-Pad37)"
+      "Net-(J2-Pad38)" "Net-(J2-Pad39)" "Net-(J2-Pad40)" "Net-(J2-Pad5)" "Net-(J2-Pad6)"
+      "Net-(J2-Pad7)" "Net-(J4-Pad1)" "Net-(J4-Pad2)" "Net-(J4-Pad3)" "Net-(J4-Pad5)"
+      "Net-(J4-Pad7)" "Net-(J5-Pad1)" "Net-(J5-Pad2)" "Net-(J5-Pad3)" "Net-(J5-Pad5)"
+      "Net-(J5-Pad7)" "Net-(JP1-Pad2)" "Net-(JP1-Pad3)" "Net-(Q1-Pad3)" "Net-(R2-Pad1)"
+      "Net-(U1-Pad11)" "Net-(U1-Pad6)" "Net-(U3-Pad11)" "Net-(U3-Pad8)" "Net-(U5-Pad10)"
+      "Net-(U5-Pad12)" "Net-(U5-Pad6)" "Net-(U5-Pad8)" "Net-(U7-Pad19)" "Net-(U9-Pad19)"
       (circuit
         (use_via Via[0-1]_800:400_um)
       )
