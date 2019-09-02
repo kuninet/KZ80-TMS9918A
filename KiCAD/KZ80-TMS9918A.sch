@@ -1850,10 +1850,6 @@ Wire Wire Line
 Wire Wire Line
 	10600 5350 10600 5550
 Wire Wire Line
-	10600 5550 9750 5550
-Wire Wire Line
-	9750 5550 9750 6200
-Wire Wire Line
 	9750 6200 10350 6200
 $Comp
 L 74xx:74LS32 U3
@@ -2296,7 +2292,6 @@ F 3 "~" H 750 5250 50  0001 C CNN
 	1    750  5250
 	1    0    0    -1  
 $EndComp
-NoConn ~ 8000 2150
 $Comp
 L Device:R_US R4
 U 1 1 5D316E34
@@ -2325,6 +2320,31 @@ Wire Wire Line
 Connection ~ 1950 5400
 Wire Wire Line
 	1950 5400 2000 5400
+Wire Wire Line
+	8000 2150 7750 2150
+Entry Wire Line
+	7750 2150 7650 2050
+Text Label 7750 2150 0    50   ~ 0
+INT80
+$Comp
+L Jumper:Jumper_3_Open JP2
+U 1 1 5D6D7932
+P 9500 6200
+F 0 "JP2" H 9500 6332 50  0000 C CNN
+F 1 "INT-J" H 9500 6423 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9500 6200 50  0001 C CNN
+F 3 "~" H 9500 6200 50  0001 C CNN
+	1    9500 6200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9500 5550 9500 6050
+Wire Wire Line
+	9500 5550 10600 5550
+Wire Wire Line
+	9250 6200 8950 6200
+Text Label 8950 6200 0    50   ~ 0
+INT80
 Wire Bus Line
 	8850 600  8850 1650
 Wire Bus Line

@@ -1,9 +1,9 @@
-(pcb "C:\Users\kunin\Box Sync\github\KZ80-TMS9918A\KiCAD\KZ80-TMS9918A.dsn"
+(pcb "/Users/kuninet/Box Sync/github/KZ80-TMS9918A/KiCAD/KZ80-TMS9918A.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
     (host_cad "KiCad's Pcbnew")
-    (host_version "(5.0.2)-1")
+    (host_version "(5.0.0-3-g5ebb6b6)")
   )
   (resolution um 10)
   (unit um)
@@ -24,6 +24,14 @@
       (path pcb 0  200000 -125000  100000 -125000  100000 -50000  200000 -50000
             200000 -125000)
     )
+    (keepout "" (polygon F.Cu 0  100000 -125000  100500 -125000  100500 -50000  100000 -50000
+            100000 -125000))
+    (keepout "" (polygon B.Cu 0  100000 -125000  100500 -125000  100500 -50000  100000 -50000
+            100000 -125000))
+    (keepout "" (polygon F.Cu 0  200000 -50000  199500 -50000  199500 -125000  200000 -125000
+            200000 -50000))
+    (keepout "" (polygon B.Cu 0  200000 -50000  199500 -50000  199500 -125000  200000 -125000
+            200000 -50000))
     (via "Via[0-1]_800:400_um")
     (rule
       (width 250)
@@ -33,6 +41,10 @@
     )
   )
   (placement
+    (component Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical
+      (place JP2 181500 -68000 front 270 (PN "INT-J"))
+      (place JP1 162000 -105500 front 90 (PN A7_JP))
+    )
     (component Capacitor_THT:CP_Radial_D5.0mm_P2.50mm
       (place C3 139000 -97500 front 270 (PN 10u))
       (place C13 118000 -62000 front 90 (PN 10u))
@@ -45,7 +57,7 @@
       (place C2 129500 -69500 front 90 (PN 22P))
       (place C4 113500 -94500 front 180 (PN 0.1u))
       (place C6 153500 -67500 front 180 (PN 0.1u))
-      (place C8 184500 -66500 front 180 (PN 0.1u))
+      (place C8 184500 -74000 front 180 (PN 0.1u))
       (place C10 196500 -76500 front 180 (PN 0.1u))
       (place C12 196500 -97500 front 180 (PN 0.1u))
     )
@@ -64,21 +76,18 @@
     (component Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm::1
       (place C1 129500 -74500 front 90 (PN 22P))
       (place C5 141000 -67500 front 180 (PN 0.1u))
-      (place C7 166000 -78500 front 180 (PN 0.1u))
-      (place C9 184500 -88000 front 180 (PN 0.1u))
+      (place C7 166000 -76000 front 180 (PN 0.1u))
+      (place C9 184500 -95500 front 180 (PN 0.1u))
       (place C11 153500 -96500 front 180 (PN 0.1u))
-    )
-    (component Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical
-      (place JP1 164000 -105500 front 90 (PN A7_JP))
     )
     (component Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal
       (place J3 190650 -60500 front 0 (PN EXT_JP))
     )
     (component Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical
-      (place J4 169000 -111000 front 0 (PN AD_JP))
+      (place J4 167500 -111000 front 0 (PN AD_JP))
     )
     (component Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical::1
-      (place J5 161500 -111000 front 0 (PN AD_JP))
+      (place J5 160000 -111000 front 0 (PN AD_JP))
     )
     (component Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Horizontal
       (place J2 126725 -62625 front 90 (PN "SBC8080 BUS"))
@@ -99,13 +108,13 @@
     )
     (component "Package_DIP:DIP-14_W7.62mm_Socket"
       (place U1 188500 -79500 front 0 (PN 74HCT04))
-      (place U5 176500 -70000 front 0 (PN 74HCT04))
+      (place U5 176500 -77500 front 0 (PN 74HCT04))
     )
     (component "Package_DIP:DIP-14_W7.62mm_Socket::1"
       (place U3 188500 -100500 front 0 (PN 74HC32))
     )
     (component "Package_DIP:DIP-16_W7.62mm_Socket"
-      (place U2 176500 -90500 front 0 (PN 74HC139))
+      (place U2 176500 -98000 front 0 (PN 74HC139))
     )
     (component "Package_DIP:DIP-20_W7.62mm_Socket"
       (place U6 146000 -99000 front 0 (PN 74HCT574))
@@ -125,6 +134,26 @@
     )
   )
   (library
+    (image Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical
+      (outline (path signal 100  -635 1270  1270 1270))
+      (outline (path signal 100  1270 1270  1270 -6350))
+      (outline (path signal 100  1270 -6350  -1270 -6350))
+      (outline (path signal 100  -1270 -6350  -1270 635))
+      (outline (path signal 100  -1270 635  -635 1270))
+      (outline (path signal 120  -1330 -6410  1330 -6410))
+      (outline (path signal 120  -1330 -1270  -1330 -6410))
+      (outline (path signal 120  1330 -1270  1330 -6410))
+      (outline (path signal 120  -1330 -1270  1330 -1270))
+      (outline (path signal 120  -1330 0  -1330 1330))
+      (outline (path signal 120  -1330 1330  0 1330))
+      (outline (path signal 50  -1800 1800  -1800 -6850))
+      (outline (path signal 50  -1800 -6850  1800 -6850))
+      (outline (path signal 50  1800 -6850  1800 1800))
+      (outline (path signal 50  1800 1800  -1800 1800))
+      (pin Rect[A]Pad_1700x1700_um 1 0 0)
+      (pin Oval[A]Pad_1700x1700_um 2 0 -2540)
+      (pin Oval[A]Pad_1700x1700_um 3 0 -5080)
+    )
     (image Capacitor_THT:CP_Radial_D5.0mm_P2.50mm
       (outline (path signal 100  3750 0  3671.46 -621.725  3440.77 -1204.38  3072.42 -1711.37
             2589.57 -2110.82  2022.54 -2377.64  1406.98 -2495.07  781.547 -2455.72
@@ -557,26 +586,6 @@
       (outline (path signal 100  -250 800  -250 -800))
       (pin Round[A]Pad_1600_um 2 2500 0)
       (pin Round[A]Pad_1600_um 1 0 0)
-    )
-    (image Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical
-      (outline (path signal 100  -635 1270  1270 1270))
-      (outline (path signal 100  1270 1270  1270 -6350))
-      (outline (path signal 100  1270 -6350  -1270 -6350))
-      (outline (path signal 100  -1270 -6350  -1270 635))
-      (outline (path signal 100  -1270 635  -635 1270))
-      (outline (path signal 120  -1330 -6410  1330 -6410))
-      (outline (path signal 120  -1330 -1270  -1330 -6410))
-      (outline (path signal 120  1330 -1270  1330 -6410))
-      (outline (path signal 120  -1330 -1270  1330 -1270))
-      (outline (path signal 120  -1330 0  -1330 1330))
-      (outline (path signal 120  -1330 1330  0 1330))
-      (outline (path signal 50  -1800 1800  -1800 -6850))
-      (outline (path signal 50  -1800 -6850  1800 -6850))
-      (outline (path signal 50  1800 -6850  1800 1800))
-      (outline (path signal 50  1800 1800  -1800 1800))
-      (pin Rect[A]Pad_1700x1700_um 1 0 0)
-      (pin Oval[A]Pad_1700x1700_um 2 0 -2540)
-      (pin Oval[A]Pad_1700x1700_um 3 0 -5080)
     )
     (image Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal
       (outline (path signal 100  2135 1270  4040 1270))
@@ -1778,7 +1787,7 @@
       (pins U1-9 U1-6)
     )
     (net /INT
-      (pins J3-5 U1-12)
+      (pins JP2-1 J3-5)
     )
     (net "Net-(J2-Pad5)"
       (pins J2-5)
@@ -1849,24 +1858,27 @@
     (net "Net-(J4-Pad7)"
       (pins J4-7 U2-9)
     )
-    (net "Net-(J2-Pad23)"
-      (pins J2-23)
+    (net "Net-(JP2-Pad2)"
+      (pins JP2-2 U1-12)
+    )
+    (net /INT80
+      (pins JP2-3 J2-23)
     )
     (class kicad_default "" /A0 /A3 /A4 /A5 /A6 /A7 /AD0 /AD1 /AD2 /AD3 /AD4
       /AD5 /AD6 /AD7 /CLK /COL /CPUCLK /D0 /D1 /D2 /D3 /D4 /D5 /D6 /D7 /EXTVDP
-      /GROMCLK /INT /RES /ROW /R~W /VA0 /VA1 /VA10 /VA11 /VA12 /VA13 /VA2
-      /VA3 /VA4 /VA5 /VA6 /VA7 /VA8 /VA9 /VD0 /VD1 /VD2 /VD3 /VD4 /VD5 /VD6
-      /VD7 /~CAS /~CSR /~CSW /~INT /~IOR /~IOW /~RAS /~RES /~R~W "Net-(C1-Pad1)"
-      "Net-(C14-Pad1)" "Net-(C15-Pad1)" "Net-(C15-Pad2)" "Net-(C2-Pad1)" "Net-(J1-Pad1)"
-      "Net-(J2-Pad18)" "Net-(J2-Pad20)" "Net-(J2-Pad22)" "Net-(J2-Pad23)"
-      "Net-(J2-Pad24)" "Net-(J2-Pad26)" "Net-(J2-Pad27)" "Net-(J2-Pad33)"
-      "Net-(J2-Pad34)" "Net-(J2-Pad35)" "Net-(J2-Pad36)" "Net-(J2-Pad37)"
-      "Net-(J2-Pad38)" "Net-(J2-Pad39)" "Net-(J2-Pad40)" "Net-(J2-Pad5)" "Net-(J2-Pad6)"
-      "Net-(J2-Pad7)" "Net-(J4-Pad1)" "Net-(J4-Pad2)" "Net-(J4-Pad3)" "Net-(J4-Pad5)"
-      "Net-(J4-Pad7)" "Net-(J5-Pad1)" "Net-(J5-Pad2)" "Net-(J5-Pad3)" "Net-(J5-Pad5)"
-      "Net-(J5-Pad7)" "Net-(JP1-Pad2)" "Net-(JP1-Pad3)" "Net-(Q1-Pad3)" "Net-(R2-Pad1)"
-      "Net-(U1-Pad11)" "Net-(U1-Pad6)" "Net-(U3-Pad11)" "Net-(U3-Pad8)" "Net-(U5-Pad10)"
-      "Net-(U5-Pad12)" "Net-(U5-Pad6)" "Net-(U5-Pad8)" "Net-(U7-Pad19)" "Net-(U9-Pad19)"
+      /GROMCLK /INT /INT80 /RES /ROW /R~W /VA0 /VA1 /VA10 /VA11 /VA12 /VA13
+      /VA2 /VA3 /VA4 /VA5 /VA6 /VA7 /VA8 /VA9 /VD0 /VD1 /VD2 /VD3 /VD4 /VD5
+      /VD6 /VD7 /~CAS /~CSR /~CSW /~INT /~IOR /~IOW /~RAS /~RES /~R~W "Net-(C1-Pad1)"
+      "Net-(C14-Pad1)" "Net-(C15-Pad1)" "Net-(C15-Pad2)" "Net-(C2-Pad1)" "Net-(J2-Pad18)"
+      "Net-(J2-Pad20)" "Net-(J2-Pad22)" "Net-(J2-Pad24)" "Net-(J2-Pad26)"
+      "Net-(J2-Pad27)" "Net-(J2-Pad33)" "Net-(J2-Pad34)" "Net-(J2-Pad35)"
+      "Net-(J2-Pad36)" "Net-(J2-Pad37)" "Net-(J2-Pad38)" "Net-(J2-Pad39)"
+      "Net-(J2-Pad40)" "Net-(J2-Pad5)" "Net-(J2-Pad6)" "Net-(J2-Pad7)" "Net-(J4-Pad1)"
+      "Net-(J4-Pad2)" "Net-(J4-Pad3)" "Net-(J4-Pad5)" "Net-(J4-Pad7)" "Net-(J5-Pad1)"
+      "Net-(J5-Pad2)" "Net-(J5-Pad3)" "Net-(J5-Pad5)" "Net-(J5-Pad7)" "Net-(JP1-Pad2)"
+      "Net-(JP1-Pad3)" "Net-(JP2-Pad2)" "Net-(Q1-Pad3)" "Net-(R2-Pad1)" "Net-(U1-Pad11)"
+      "Net-(U1-Pad6)" "Net-(U3-Pad11)" "Net-(U3-Pad8)" "Net-(U5-Pad10)" "Net-(U5-Pad12)"
+      "Net-(U5-Pad6)" "Net-(U5-Pad8)" "Net-(U7-Pad19)" "Net-(U9-Pad19)"
       (circuit
         (use_via Via[0-1]_800:400_um)
       )
