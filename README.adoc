@@ -4,7 +4,6 @@
 * SBC8080バスにつながるTMS9918Aビデオボードのプロジェクトです。
 * 本ボードの詳しい説明は以下のwikiページをご覧ください。
 ** https://github.com/kuninet/KZ80-TMS9918A/wiki
-* ☆★ 試作検討段階です。参考までに御覧ください
 
 image::image/KZ80-TMS9918A.jpg[]
 
